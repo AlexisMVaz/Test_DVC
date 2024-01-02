@@ -1,6 +1,6 @@
 outs:
-- md5: 22e3f61e52c0ba45334d973244efc155.dir
-  size: 64128504
-  nfiles: 2800
+- md5: ddeb9443dbb704b082c48e466746c2e9.dir
+  size: 64398570
+  nfiles: 2802
   hash: md5
   path: cats-dogs
