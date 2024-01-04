@@ -25,7 +25,7 @@ def classify_new_data(new_data, data_path):
             shutil.move(new_train / Classes[n] / k, data / 'val' / Classes[n])
         for m in Total_class:
             if m not in Val_images:
-              shutil.move(new_train / Classes[n] / k, data / 'train' / Classes[n])  
+                shutil.move(new_train / Classes[n] / m, data / 'train' / Classes[n])  
 
 if __name__ == "__main__":
     new_data = sys.argv[1]
