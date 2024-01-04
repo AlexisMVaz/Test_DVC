@@ -8,7 +8,7 @@ yaml = YAML(typ='safe')
 def train(data_train):
     params = yaml.load(open("params.yaml", encoding="utf-8"))
 
-    model = YOLO(params['model'])
+    model = YOLO(params['train']['model'])
     if ~params['train']['resume']:
         model.train(data=data_train, epochs=params['train']['epochs']\
                     , plots = True, device = params['train']['device'])

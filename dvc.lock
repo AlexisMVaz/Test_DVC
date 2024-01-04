@@ -1,13 +1,13 @@
 schema: '2.0'
 stages:
   filter_copy:
-    cmd: ' '
+    cmd: python src/prepare_data.py new_train_data/ data/
     deps:
     - path: new_train_data/
       hash: md5
-      md5: d751713988987e9331980363e24189ce.dir
-      size: 0
-      nfiles: 0
+      md5: 4a4609f6cd72bf796bd3a5ef21df1e2f.dir
+      size: 64128504
+      nfiles: 2800
     - path: src/prepare_data.py
       hash: md5
       md5: 6c3b5a7b04cb233acee9fd1f5e4f0a98
@@ -18,6 +18,6 @@ stages:
     outs:
     - path: data/
       hash: md5
-      md5: f6afbe2dc4c5176d1523014cec60db29.dir
-      size: 64128504
-      nfiles: 2800
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0
