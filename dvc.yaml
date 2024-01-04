@@ -1,6 +1,6 @@
 stages:
   filter_copy:
-    cmd: ' '
+    cmd: python src/prepare_data.py new_train_data/ data/
     deps:
     - new_train_data/
     - src/prepare_data.py
@@ -8,3 +8,17 @@ stages:
     - train.validation_split
     outs:
     - data/
+
+  train:
+    cmd: python src/train_model.py data/
+    deps:
+    - data/
+    - src/train_model.py
+    params:
+    - train.model
+    - train.resume
+    - train.epochs
+    - train.device
+    - train.validation_split
+    outs:
+    - runs/

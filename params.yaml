@@ -1,6 +1,6 @@
 train:
   model: yolov8n-cls.pt
-  resume: True
+  resume: False
   epochs: 15
   device: 0
   validation_split: 0.2
