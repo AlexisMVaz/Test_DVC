@@ -1,0 +1,10 @@
+stages:
+  filter_copy:
+    cmd: ' '
+    deps:
+    - new_train_data/
+    - src/prepare_data.py
+    params:
+    - train.validation_split
+    outs:
+    - data/

@@ -1,4 +1,4 @@
-import os, pathlib, random, shutil
+import os, sys, pathlib, random, shutil
 from ruamel.yaml import YAML
 
 #same as safe_load from pyyaml
@@ -7,7 +7,7 @@ yaml = YAML(typ='safe')
 def classify_new_data(new_data, data_path):
     params = yaml.load(open("params.yaml", encoding="utf-8"))
     data = pathlib.Path(data_path)
-    new_train = Path(new_data)
+    new_train = pathlib.Path(new_data)
     #Ultralytics searches for "train" and "val" folders
     #Each class has to be separated added to a different folder
     Classes = os.listdir(new_train)
